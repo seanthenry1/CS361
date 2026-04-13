@@ -1,1 +1,1 @@
-print("This is the second test commit")
+print("This is the second commit")
