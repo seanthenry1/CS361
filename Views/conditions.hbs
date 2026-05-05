@@ -1,0 +1,16 @@
+<h1>{{location.name}} Conditions</h1>
+
+<p>Wind Conditions: {{location.wind}}</p>
+<p>Surf Conditions: {{location.surf}}</p>
+<p>Water Temperature: {{location.waterTemp}}</p>
+<p>UV Index: {{location.uvIndex}}</p>
+
+<h2>Safety Rating: {{location.safety}}</h2>
+
+{{#if location.advisory}}
+    <p>⚠ Small Craft Advisory Active</p>
+{{/if}}
+
+<form action="/favorites/{{location.id}}" method="POST">
+    <button type="submit">Save Location</button>
+</form>

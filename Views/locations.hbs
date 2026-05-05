@@ -1,0 +1,13 @@
+<h1>Select a Location</h1>
+
+<form action="/conditions" method="GET">
+    <select name="id">
+        {{#each locations}}
+            <option value="{{this.id}}">
+                {{this.name}}
+            </option>
+        {{/each}}
+    </select>
+
+    <button type="submit">View Conditions</button>
+</form>

@@ -1,0 +1,16 @@
+<h1>Saved Locations</h1>
+
+{{#each favorites}}
+    <div>
+        <h2>{{this.name}}</h2>
+        <p>Safety Rating: {{this.safety}}</p>
+
+        <form 
+            action="/favorites/delete/{{this.id}}" 
+            method="POST"
+            onsubmit="return confirm('Are you sure you want to delete this saved location?');"
+        >
+            <button type="submit">Delete Location</button>
+        </form>
+    </div>
+{{/each}}
